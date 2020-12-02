@@ -1,0 +1,16 @@
+{
+  "name": "advent-of-code-2019",
+  "version": "1.0.0",
+  "description": "Solutions to the daily Advent of Code 2019 puzzles.",
+  "main": "index.js",
+  "scripts": {
+    "day1": "cd ./day01 && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AMCN41R/advent-of-code.git"
+  },
+  "author": "Alex McNair",
+  "license": "ISC",
+  "homepage": "https://github.com/AMCN41R/advent-of-code#readme"
+}
