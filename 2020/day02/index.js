@@ -1,7 +1,7 @@
 const fs = require("fs");
 
-var content = fs.readFileSync("input.txt", "utf-8");
-var lines = content.split("\r\n");
+const content = fs.readFileSync("input.txt", "utf-8");
+const lines = content.split("\r\n");
 console.log("Total Passwords:", lines.length);
 
 const info = lines.map(x => {

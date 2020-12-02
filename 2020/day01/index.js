@@ -1,7 +1,7 @@
 const fs = require("fs");
 
-var content = fs.readFileSync("input.txt", "utf-8");
-var lines = content.split("\r\n").map(Number);
+const content = fs.readFileSync("input.txt", "utf-8");
+const lines = content.split("\r\n").map(Number);
 console.log("Total Records:", lines.length);
 
 const report1 = () => {
