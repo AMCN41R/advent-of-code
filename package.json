@@ -4,7 +4,8 @@
   "description": "Solutions to the daily Advent of Code 2020 puzzles.",
   "main": "index.js",
   "scripts": {
-    "day1": "cd ./day01 && node index.js"
+    "day1": "cd ./day01 && node index.js",
+    "day2": "cd ./day02 && node index.js"
   },
   "repository": {
     "type": "git",
