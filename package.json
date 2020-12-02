@@ -4,7 +4,7 @@
   "description": "Solutions to the daily Advent of Code 2020 puzzles.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "day1": "cd ./day01 && node index.js"
   },
   "repository": {
     "type": "git",
