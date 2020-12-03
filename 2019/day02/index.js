@@ -34,7 +34,7 @@ const runProgram = (memory, noun, verb) => {
 
 // part one
 var result1 = runProgram([...codes], 12, 2);
-console.log("Part One:", result1[0]);
+console.log("Part One:", result1[0]); // answer: 3101878
 
 // part 2
 for (let i = 0; i < 99; i++) {
@@ -45,4 +45,4 @@ for (let i = 0; i < 99; i++) {
       break;
     }
   }
-}
+} // answer: 8444
