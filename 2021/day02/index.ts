@@ -1,4 +1,4 @@
-const utils = require("../utils");
+import * as utils from "../utils";
 
 const input = utils.getLines("input.txt");
 
@@ -11,7 +11,7 @@ const testInput = [
   "forward 2"
 ];
 
-const partOne = (items) => {
+const partOne = (items: string[]) => {
   const pos = items.reduce((prev, next) => {
     const parts = next.split(" ");
     if (parts[0] === "forward") prev.h = prev.h + Number(parts[1]);
@@ -28,7 +28,7 @@ console.log("P1 RESULT (test):", partOne(testInput)); // expected: 15 x 10 = 150
 console.log("P1 RESULT:", partOne(input)); // answer: 1840243
 
 
-const partTwo = (items) => {
+const partTwo = (items: string[]) => {
   const pos = items.reduce((prev, next) => {
     const parts = next.split(" ");
     if (parts[0] === "forward") {

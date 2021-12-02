@@ -1,4 +1,4 @@
-const utils = require("../utils");
+import * as utils from "../utils";
 
 const input = utils.getLines("input.txt").map(Number);
 
@@ -15,7 +15,7 @@ const testInput = [
   263
 ]
 
-const partOne = (items) => items.reduce((total, next, i) => {
+const partOne = (items: number[]) => items.reduce((total, next, i) => {
   return next > items[i - 1] ? total + 1 : total;
 }, 0);
 
@@ -23,7 +23,7 @@ console.log("P1 RESULT (test):", partOne(testInput)); // expected: 7
 console.log("P1 RESULT:", partOne(input)); // answer: 1266
 
 
-const partTwo = (items) => items.map((item, i) => {
+const partTwo = (items: number[]) => items.map((item, i) => {
   const l = items.length-1;
   if ((i+1) > l || (i+2)> l) return -1;
   return item + items[i + 1] + items[i + 2];

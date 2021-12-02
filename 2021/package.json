@@ -1,0 +1,21 @@
+{
+  "name": "advent-of-code-2021",
+  "version": "1.0.0",
+  "description": "Solutions to the daily Advent of Code 2021 puzzles.",
+  "main": "index.js",
+  "scripts": {
+    "day1": " tsc utils.ts ./day01/index.ts && cd ./day01 && node index.js",
+    "day2": " tsc utils.ts ./day02/index.ts && cd ./day02 && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AMCN41R/advent-of-code.git"
+  },
+  "author": "Alex McNair",
+  "license": "ISC",
+  "homepage": "https://github.com/AMCN41R/advent-of-code#readme",
+  "devDependencies": {
+    "@types/node": "^16.11.11",
+    "typescript": "^4.5.2"
+  }
+}
