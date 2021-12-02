@@ -1,4 +1,5 @@
 import * as utils from "../utils";
+const { log, logPart } = utils;
 
 const input = utils.getLines("input.txt");
 
@@ -10,6 +11,8 @@ const testInput = [
   "down 8",
   "forward 2"
 ];
+
+logPart('ONE');
 
 const partOne = (items: string[]) => {
   const pos = items.reduce((prev, next) => {
@@ -24,9 +27,13 @@ const partOne = (items: string[]) => {
   return pos.h * pos.d;
 }
 
-console.log("P1 RESULT (test):", partOne(testInput)); // expected: 15 x 10 = 150
-console.log("P1 RESULT:", partOne(input)); // answer: 1840243
+log([
+  {msg: 'test', expected: 150, result: partOne(testInput) },
+  {msg: 'result', expected: 1840243, result: partOne(input) },
+]);
 
+
+logPart('TWO');
 
 const partTwo = (items: string[]) => {
   const pos = items.reduce((prev, next) => {
@@ -44,5 +51,7 @@ const partTwo = (items: string[]) => {
   return pos.h * pos.d;
 }
 
-console.log("P2 RESULT (test):", partTwo(testInput)); // expected: 15 x 60 = 900
-console.log("P2 RESULT:", partTwo(input)); // answer: 1727785422
+log([
+  {msg: 'test', expected: 900, result: partTwo(testInput) },
+  {msg: 'result', expected: 1727785422, result: partTwo(input) },
+]);

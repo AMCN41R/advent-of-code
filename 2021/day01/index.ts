@@ -1,4 +1,5 @@
 import * as utils from "../utils";
+const { log, logPart } = utils;
 
 const input = utils.getLines("input.txt").map(Number);
 
@@ -15,19 +16,27 @@ const testInput = [
   263
 ]
 
+logPart('ONE');
+
 const partOne = (items: number[]) => items.reduce((total, next, i) => {
   return next > items[i - 1] ? total + 1 : total;
 }, 0);
 
-console.log("P1 RESULT (test):", partOne(testInput)); // expected: 7
-console.log("P1 RESULT:", partOne(input)); // answer: 1266
+log([
+  { msg: 'test', expected: 7, result: partOne(testInput) },
+  { msg: 'result', expected: 1266, result: partOne(input) },
+]);
 
+
+logPart('TWO');
 
 const partTwo = (items: number[]) => items.map((item, i) => {
-  const l = items.length-1;
-  if ((i+1) > l || (i+2)> l) return -1;
+  const l = items.length - 1;
+  if ((i + 1) > l || (i + 2) > l) return -1;
   return item + items[i + 1] + items[i + 2];
 }).filter(x => x !== -1);
 
-console.log("P2 RESULT (test):", partOne(partTwo(testInput))); // expected: 5
-console.log("P2 RESULT:", partOne(partTwo(input))); // answer: 1217
+log([
+  { msg: 'test', expected: 5, result: partOne(partTwo(testInput)) },
+  { msg: 'result', expected: 1217, result: partOne(partTwo(input)) },
+]);

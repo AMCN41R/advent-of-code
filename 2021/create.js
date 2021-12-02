@@ -18,7 +18,7 @@ if (fs.existsSync(dir)) {
 }
 
 const content =
-  'const utils = require("../utils");\r\n' +
+  'import * as utils from "../utils";\r\n' +
   '\r\n' +
   'const input = utils.getLines("input.txt");\r\n' +
   '\r\n' +
@@ -26,6 +26,6 @@ const content =
   `\r\n\r\n`;
 
 fs.mkdirSync(dir);
-fs.appendFileSync(`./${dir}/index.js`, content);
+fs.appendFileSync(`./${dir}/index.ts`, content);
 fs.appendFileSync(`./${dir}/input.txt`, "");
 fs.appendFileSync(`./${dir}/README`, "");
