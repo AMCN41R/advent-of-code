@@ -10,18 +10,10 @@ export const getLines = (filepath: string): string[] => {
   return lines;
 }
 
-export const logPart = (part: 'ONE' | 'TWO'): void => {
+export const logPartOne = (): void => logPart("ONE");
+export const logPartTwo = (): void => logPart("TWO");
+
+const logPart = (part: 'ONE' | 'TWO'): void => {
   console.log(`** PART ${part} **`);
   console.log("--------------")
-}
-
-export const log = <T>(detail: { msg: 'test' | 'result', expected?: T, result: T }[]) => {
-  const table = detail.map(x => ({
-    item: x.msg,
-    expected: x.expected || "-",
-    result: x.result,
-    ok: x.expected === x.result ? "OK" : "FAIL"
-  }));
-  console.table(table);
-  console.log("");
 }

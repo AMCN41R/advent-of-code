@@ -2,7 +2,7 @@ const fs = require("fs");
 
 const args = process.argv.slice(2);
 
-if (!args || !args[0] || !Number(args[0])){
+if (!args || !args[0] || !Number(args[0])) {
   console.log("Valid day argument must be provided.");
   return;
 }
@@ -19,13 +19,49 @@ if (fs.existsSync(dir)) {
 
 const content =
   'import * as utils from "../utils";\r\n' +
+  'const { logPartOne, logPartTwo } = utils;\r\n' +
+  'const log = console.log;\r\n' +
   '\r\n' +
-  'const input = utils.getLines("input.txt");\r\n' +
+  'export const input = utils.getLines(__dirname + "\\\\input.txt");\r\n' +
   '\r\n' +
-  'const testInput = [];' +
-  `\r\n\r\n`;
+  'export const testInput: string[] = [];\r\n' +
+  `\r\n` +
+  'logPartOne();\r\n' +
+  '\r\n' +
+  'export const partOne = () => {\r\n' +
+  '  return 0;\r\n' +
+  '}\r\n' +
+  '\r\n' +
+  'logPartTwo();\r\n' +
+  '\r\n' +
+  'export const partTwo = () => {\r\n' +
+  '  return 0;\r\n' +
+  '}\r\n' +
+  '\r\n';
+
+const test =
+  'global.console = { log: jest.fn() }\r\n' +
+  'const index = require("./index");\r\n' +
+  '\r\n' +
+  'test("part one - test", () => {\r\n' +
+  '  expect(index.partOne(index.testInput)).toBe(0);\r\n' +
+  '})\r\n' +
+  '\r\n' +
+  'test("part one", () => {\r\n' +
+  '  expect(index.partOne(index.input)).toBe(0);\r\n' +
+  '})\r\n' +
+  '\r\n' +
+  'test("part two - test", () => {\r\n' +
+  '  expect(index.partTwo(index.testInput)).toBe(0);\r\n' +
+  '})\r\n' +
+  '\r\n' +
+  'test("part two", () => {\r\n' +
+  '  expect(index.partTwo(index.input)).toBe(0);\r\n' +
+  '})\r\n' +
+  '\r\n';
 
 fs.mkdirSync(dir);
 fs.appendFileSync(`./${dir}/index.ts`, content);
+fs.appendFileSync(`./${dir}/index.test.js`, test);
 fs.appendFileSync(`./${dir}/input.txt`, "");
 fs.appendFileSync(`./${dir}/README`, "");

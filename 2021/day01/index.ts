@@ -1,9 +1,10 @@
 import * as utils from "../utils";
-const { log, logPart } = utils;
+const { logPartOne, logPartTwo } = utils;
+const log = console.log;
 
-const input = utils.getLines("input.txt").map(Number);
+export const input = utils.getLines(__dirname + "\\input.txt").map(Number);
 
-const testInput = [
+export const testInput = [
   199,
   200,
   208,
@@ -16,27 +17,30 @@ const testInput = [
   263
 ]
 
-logPart('ONE');
+logPartOne();
 
-const partOne = (items: number[]) => items.reduce((total, next, i) => {
-  return next > items[i - 1] ? total + 1 : total;
-}, 0);
+export const partOne = (items: number[]): number => {
+  const result = items.reduce((total, next, i) => next > items[i - 1] ? total + 1 : total, 0)
+  return result;
+};
 
-log([
-  { msg: 'test', expected: 7, result: partOne(testInput) },
-  { msg: 'result', expected: 1266, result: partOne(input) },
-]);
+log("TEST:", partOne(testInput)); // expected 7
+log("RESULT:", partOne(input)); // answer: 1266
+log();
 
+logPartTwo();
 
-logPart('TWO');
+export const partTwo = (items: number[]): number => {
+  const grp = items.map((item, i) => {
+    const l = items.length - 1;
+    if ((i + 1) > l || (i + 2) > l) return -1;
+    return item + items[i + 1] + items[i + 2];
+  }).filter(x => x !== -1);
 
-const partTwo = (items: number[]) => items.map((item, i) => {
-  const l = items.length - 1;
-  if ((i + 1) > l || (i + 2) > l) return -1;
-  return item + items[i + 1] + items[i + 2];
-}).filter(x => x !== -1);
+  const result = partOne(grp);
 
-log([
-  { msg: 'test', expected: 5, result: partOne(partTwo(testInput)) },
-  { msg: 'result', expected: 1217, result: partOne(partTwo(input)) },
-]);
+  return result;
+};
+
+log("TEST:", partTwo(testInput)); // expected: 5
+log("RESULT:", partTwo(input)); // answer: 1217
