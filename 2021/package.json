@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "tsc && jest",
-    "day1": " tsc utils.ts ./day01/index.ts && cd ./day01 && node index.js",
-    "day2": " tsc utils.ts ./day02/index.ts && cd ./day02 && node index.js",
-    "day3": " tsc utils.ts ./day03/index.ts && cd ./day03 && node index.js"
+    "day1": " tsc && cd ./day01 && node index.js",
+    "day2": " tsc && cd ./day02 && node index.js",
+    "day3": " tsc && cd ./day03 && node index.js"
   },
   "repository": {
     "type": "git",
