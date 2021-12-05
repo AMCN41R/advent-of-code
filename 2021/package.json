@@ -7,7 +7,8 @@
     "test": "tsc && jest",
     "day1": " tsc && cd ./day01 && node index.js",
     "day2": " tsc && cd ./day02 && node index.js",
-    "day3": " tsc && cd ./day03 && node index.js"
+    "day3": " tsc && cd ./day03 && node index.js",
+    "day4": " tsc && cd ./day04 && node index.js"
   },
   "repository": {
     "type": "git",
