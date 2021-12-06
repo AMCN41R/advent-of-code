@@ -28,13 +28,13 @@ const content =
   `\r\n` +
   'logPartOne();\r\n' +
   '\r\n' +
-  'export const partOne = () => {\r\n' +
+  'export const partOne = (items: string[]) => {\r\n' +
   '  return 0;\r\n' +
   '}\r\n' +
   '\r\n' +
   'logPartTwo();\r\n' +
   '\r\n' +
-  'export const partTwo = () => {\r\n' +
+  'export const partTwo = (items: string[]) => {\r\n' +
   '  return 0;\r\n' +
   '}\r\n' +
   '\r\n';
