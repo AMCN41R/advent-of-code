@@ -26,3 +26,5 @@ export const chunk = <T>(arr: T[], chunkSize: number): T[][] => {
   }
   return res;
 }
+
+export const has = <T>(arr: T[], item: T): boolean => arr.indexOf(item) !== -1;

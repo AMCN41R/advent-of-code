@@ -26,18 +26,27 @@ const content =
   '\r\n' +
   'export const testInput: string[] = [];\r\n' +
   `\r\n` +
+  `\r\n` +
   'logPartOne();\r\n' +
   '\r\n' +
   'export const partOne = (items: string[]) => {\r\n' +
   '  return 0;\r\n' +
   '}\r\n' +
   '\r\n' +
+  'log("P1 Result (test):", partOne(testInput)); // expected: \r\n' +
+  '// log("P1 Result:", partOne(input)); // answer: \r\n' +
+  'log();\r\n' +
+  '\r\n' +
+  '\r\n' +
   'logPartTwo();\r\n' +
   '\r\n' +
   'export const partTwo = (items: string[]) => {\r\n' +
   '  return 0;\r\n' +
   '}\r\n' +
-  '\r\n';
+  '\r\n' +
+  'log("P2 Result (test):", partTwo(testInput)); // expected: \r\n' +
+  '// log("P2 Result:", partTwo(input)); // answer: \r\n' +
+  'log();\r\n';
 
 const test =
   'global.console = { log: jest.fn() }\r\n' +
