@@ -29,7 +29,7 @@ const content =
   `\r\n` +
   'logPartOne();\r\n' +
   '\r\n' +
-  'export const partOne = (items: string[]) => {\r\n' +
+  'export const partOne = (items: string[]): number => {\r\n' +
   '  return 0;\r\n' +
   '}\r\n' +
   '\r\n' +
@@ -40,7 +40,7 @@ const content =
   '\r\n' +
   'logPartTwo();\r\n' +
   '\r\n' +
-  'export const partTwo = (items: string[]) => {\r\n' +
+  'export const partTwo = (items: string[]): number => {\r\n' +
   '  return 0;\r\n' +
   '}\r\n' +
   '\r\n' +
