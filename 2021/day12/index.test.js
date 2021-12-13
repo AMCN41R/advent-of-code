@@ -2,7 +2,7 @@ global.console = { log: jest.fn() }
 const index = require("./index");
 
 test("part one - test", () => {
-  expect(index.partOne(index.testInput)).toBe(19);
+  expect(index.partOne(index.testInput)).toBe(10);
 })
 
 test("part one", () => {
@@ -10,7 +10,7 @@ test("part one", () => {
 })
 
 test("part two - test", () => {
-  expect(index.partTwo(index.testInput)).toBe(103);
+  expect(index.partTwo(index.testInput)).toBe(36);
 })
 
 test("part two", () => {

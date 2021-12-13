@@ -5,16 +5,13 @@ const log = console.log;
 export const input = utils.getLines(__dirname + "\\input.txt");
 
 export const testInput: string[] = [
-  "dc-end",
-  "HN-start",
-  "start-kj",
-  "dc-start",
-  "dc-HN",
-  "LN-dc",
-  "HN-end",
-  "kj-sa",
-  "kj-HN",
-  "kj-dc",
+  "start-A",
+  "start-b",
+  "A-c",
+  "A-b",
+  "b-d",
+  "A-end",
+  "b-end",
 ];
 
 type Graph = { [key: string]: string[] };
@@ -81,7 +78,7 @@ export const partOne = (items: string[]): number => {
   return result.length;
 }
 
-log("P1 Result (test):", partOne(testInput)); // expected: 19
+log("P1 Result (test):", partOne(testInput)); // expected: 10
 log("P1 Result:", partOne(input)); // answer: 5958
 log();
 
@@ -96,6 +93,6 @@ export const partTwo = (items: string[]): number => {
   return result.length;
 }
 
-log("P2 Result (test):", partTwo(testInput)); // expected: 103
+log("P2 Result (test):", partTwo(testInput)); // expected: 36
 log("P2 Result:", partTwo(input)); // answer: 150426
 log();

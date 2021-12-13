@@ -137,6 +137,6 @@ export const partTwo = (items: string[]): string => {
   return "ALREKFKU";
 }
 
-log("P2 Result (test):", partTwo(testInput)); // expected: 
+log("P2 Result (test):", partTwo(testInput)); // expected: O
 log("P2 Result:", partTwo(input)); // answer: ALREKFKU
 log();

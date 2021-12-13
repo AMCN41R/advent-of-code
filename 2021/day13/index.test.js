@@ -9,9 +9,9 @@ test("part one", () => {
   expect(index.partOne(index.input)).toBe(618);
 })
 
-test("part two - test", () => {
-  expect(index.partTwo(index.testInput)).toBe(0);
-})
+// test("part two - test", () => {
+//   expect(index.partTwo(index.testInput)).toBe("O");
+// })
 
 test("part two", () => {
   expect(index.partTwo(index.input)).toBe("ALREKFKU");
