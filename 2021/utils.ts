@@ -28,3 +28,17 @@ export const chunk = <T>(arr: T[], chunkSize: number): T[][] => {
 }
 
 export const has = <T>(arr: T[], item: T): boolean => arr.indexOf(item) !== -1;
+
+export const mostFrequent = <T>(arr: T[]): { item: T | null, count: number } => {
+  const hash = arr.reduce((r, n) => r.set(n, (r.get(n) || 0) + 1), new Map<T, number>());
+  const result = [...hash].reduce((r, v) => v[1] > r[1] ? v : r)
+
+  return { item: result[0], count: result[1] };
+}
+
+export const leastFrequent = <T>(arr: T[]): { item: T | null, count: number } => {
+  const hash = arr.reduce((r, n) => r.set(n, (r.get(n) || 0) + 1), new Map<T, number>());
+  const result = [...hash].reduce((r, v) => v[1] < r[1] ? v : r);
+
+  return { item: result[0], count: result[1] };
+}
