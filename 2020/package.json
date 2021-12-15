@@ -13,7 +13,12 @@
     "day7": "cd ./day07 && node index.js",
     "day8": "cd ./day08 && node index.js",
     "day9": "cd ./day09 && node index.js",
-    "day10": "cd ./day10 && node index.js"
+    "day10": "cd ./day10 && node index.js",
+    "day11": "cd ./day11 && node index.js",
+    "day12": "cd ./day12 && node index.js",
+    "day13": "cd ./day13 && node index.js",
+    "day14": "cd ./day14 && node index.js",
+    "day15": "cd ./day15 && node index.js"
   },
   "repository": {
     "type": "git",
