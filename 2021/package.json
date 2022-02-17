@@ -19,7 +19,8 @@
     "day12": " tsc && cd ./day12 && node index.js",
     "day13": " tsc && cd ./day13 && node index.js",
     "day14": " tsc && cd ./day14 && node index.js",
-    "day15": " tsc && cd ./day15 && node index.js"
+    "day15": " tsc && cd ./day15 && node index.js",
+    "day16": " tsc && cd ./day16 && node index.js"
   },
   "repository": {
     "type": "git",
