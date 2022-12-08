@@ -40,7 +40,6 @@ export const getDuplicates = (items: string[]): string[] => {
       }
   });
 
-  // return [...new Set(uniqueElements)]
   return filteredElements;
 }
 
