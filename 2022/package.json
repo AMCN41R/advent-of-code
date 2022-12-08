@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "tsc && jest",
-    "day1": " tsc && cd ./day01 && node index.js"
+    "day1": " tsc && cd ./day01 && node index.js",
+    "day2": " tsc && cd ./day02 && node index.js"
   },
   "keywords": [],
   "author": "",
