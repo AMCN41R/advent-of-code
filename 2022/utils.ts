@@ -17,6 +17,9 @@ const logPart = (part: 'ONE' | 'TWO'): void => {
   console.log("--------------")
 }
 
+export const alpha = 'abcdefghijklmnopqrstuvwxyz';
+export const alphaCaps = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
 export const chunk = <T>(arr: T[], chunkSize: number): T[][] => {
   const res = [];
   for (let i = 0; i < arr.length; i += chunkSize) {
@@ -24,6 +27,21 @@ export const chunk = <T>(arr: T[], chunkSize: number): T[][] => {
     res.push(chunk);
   }
   return res;
+}
+
+export const getDuplicates = (items: string[]): string[] => {
+  const uniqueElements = new Set(items);
+  const copySet = [...items];
+  const filteredElements = items.filter(item => {
+      if (uniqueElements.has(item)) {
+          uniqueElements.delete(item);
+      } else {
+          return item;
+      }
+  });
+
+  // return [...new Set(uniqueElements)]
+  return filteredElements;
 }
 
 export const has = <T>(arr: T[], item: T): boolean => arr.indexOf(item) !== -1;
