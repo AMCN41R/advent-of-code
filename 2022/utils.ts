@@ -1,9 +1,8 @@
 import * as fs from "fs";
-import "colors";
 
 export const getLines = (filepath: string): string[] => {
   const content = fs.readFileSync(filepath, "utf-8");
-  const lines = content.split("\r\n");
+  const lines = content.split("\n");
   console.log("Total Input Records:", lines.length);
   console.log("");
 
@@ -28,3 +27,5 @@ export const chunk = <T>(arr: T[], chunkSize: number): T[][] => {
 }
 
 export const has = <T>(arr: T[], item: T): boolean => arr.indexOf(item) !== -1;
+
+export const sum = (arr: number[]): number => arr.reduce((total, next) => total + next, 0);
