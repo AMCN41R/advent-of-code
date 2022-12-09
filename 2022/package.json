@@ -12,7 +12,8 @@
     "day5": " tsc && cd ./day05 && node index.js",
     "day6": " tsc && cd ./day06 && node index.js",
     "day7": " tsc && cd ./day07 && node index.js",
-    "day8": " tsc && cd ./day08 && node index.js"
+    "day8": " tsc && cd ./day08 && node index.js",
+    "day9": " tsc && cd ./day09 && node index.js"
   },
   "keywords": [],
   "author": "",
