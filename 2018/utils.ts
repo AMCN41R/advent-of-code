@@ -17,4 +17,18 @@ const logPart = (part: 'ONE' | 'TWO'): void => {
   console.log("--------------")
 }
 
+export const getDuplicates = (items: string[]): string[] => {
+  const uniqueElements = new Set(items);
+  const copySet = [...items];
+  const filteredElements = items.filter(item => {
+      if (uniqueElements.has(item)) {
+          uniqueElements.delete(item);
+      } else {
+          return item;
+      }
+  });
+
+  return filteredElements;
+}
+
 export const sum = (arr: number[]): number => arr.reduce((total, next) => total + next, 0);
