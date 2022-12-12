@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "tsc && jest",
-    "day1": " tsc && cd ./day01 && node index.js",
-    "day2": " tsc && cd ./day02 && node index.js",
-    "day3": " tsc && cd ./day03 && node index.js",
-    "day4": " tsc && cd ./day04 && node index.js"
+    "day1": "tsc && cd ./day01 && node index.js",
+    "day2": "tsc && cd ./day02 && node index.js",
+    "day3": "tsc && cd ./day03 && node index.js",
+    "day4": "tsc && cd ./day04 && node index.js",
+    "day5": "tsc && cd ./day05 && node index.js"
   },
   "keywords": [],
   "author": "",

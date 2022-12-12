@@ -12,6 +12,10 @@ const dayStr = day < 10 ? `0${day}` : `${day}`;
 
 const dir = `day${dayStr}`;
 
+let pj = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+pj.scripts[`day${day}`] = `tsc && cd ./day${dayStr} && node index.js`
+fs.writeFileSync('./package.json', JSON.stringify(pj, null, 2));
+
 if (fs.existsSync(dir)) {
   console.log(`Directory '${dir}' already exists.`);
   return;

@@ -62,4 +62,7 @@ export const mode = (arr: number[]): { value: number, count: number } => {
   return { value: max, count };
 };
 
+export const alpha = 'abcdefghijklmnopqrstuvwxyz';
+export const alphaCaps = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
 export const sum = (arr: number[]): number => arr.reduce((total, next) => total + next, 0);
