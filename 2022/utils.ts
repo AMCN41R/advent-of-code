@@ -45,4 +45,8 @@ export const getDuplicates = (items: string[]): string[] => {
 
 export const has = <T>(arr: T[], item: T): boolean => arr.indexOf(item) !== -1;
 
-export const sum = (arr: number[]): number => arr.reduce((total, next) => total + next, 0);
+export const add = (a: number, b: number) => a + b;
+export const sum = (arr: number[]): number => arr.reduce(add, 0);
+
+export const multiply = (a: number, b: number) => a * b;
+export const product = (arr: number[]): number => arr.reduce(multiply, 1);
