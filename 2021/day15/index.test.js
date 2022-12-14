@@ -6,14 +6,14 @@ test("part one - test", () => {
 })
 
 test("part one", () => {
-  expect(index.partOne(index.input)).toBe(0);
+  expect(index.partOne(index.input)).toBe(487);
 })
 
 test("part two - test", () => {
-  expect(index.partTwo(index.testInput)).toBe(0);
+  expect(index.partTwo(index.testInput)).toBe(315);
 })
 
-test("part two", () => {
-  expect(index.partTwo(index.input)).toBe(0);
-})
+// test("part two", () => {
+//   expect(index.partTwo(index.input)).toBe(2821);
+// })
 
