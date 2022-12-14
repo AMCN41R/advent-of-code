@@ -2,7 +2,7 @@ import * as utils from "../utils";
 const { logPartOne, logPartTwo } = utils;
 const log = console.log;
 
-export const input = utils.getLines(__dirname + "\\input.txt");
+export const input = utils.getLines(__dirname + "/input.txt");
 
 export const testInput: string[] = [
   "16,1,2,0,4,2,7,1,2,14"

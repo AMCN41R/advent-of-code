@@ -2,7 +2,7 @@ import * as utils from "../utils";
 const { logPartOne, logPartTwo } = utils;
 const log = console.log;
 
-export const input = utils.getLines(__dirname + "\\input.txt").map(Number);
+export const input = utils.getLines(__dirname + "/input.txt").map(Number);
 
 export const testInput = [
   199,

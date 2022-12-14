@@ -2,7 +2,7 @@ import * as utils from "../utils";
 const { logPartOne, logPartTwo } = utils;
 const log = console.log;
 
-export const input = utils.getLines(__dirname + "\\input.txt");
+export const input = utils.getLines(__dirname + "/input.txt");
 
 export const testInput: string[] = [
   "NNCB",
@@ -74,5 +74,5 @@ export const partTwo = (items: string[]): number => {
 }
 
 log("P2 Result (test):", partTwo(testInput)); // expected: 2188189693529
-// log("P2 Result:", partTwo(input)); // answer: 
+// log("P2 Result:", partTwo(input)); // answer:
 log();
