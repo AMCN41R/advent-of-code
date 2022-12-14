@@ -20,6 +20,9 @@ const logPart = (part: 'ONE' | 'TWO'): void => {
 export const alpha = 'abcdefghijklmnopqrstuvwxyz';
 export const alphaCaps = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
+export type logger = (message?: any, ...optionalParams: any[]) => void;
+export const noLog: logger = () => { };
+
 export const chunk = <T>(arr: T[], chunkSize: number): T[][] => {
   const res = [];
   for (let i = 0; i < arr.length; i += chunkSize) {
@@ -33,11 +36,11 @@ export const getDuplicates = (items: string[]): string[] => {
   const uniqueElements = new Set(items);
   const copySet = [...items];
   const filteredElements = items.filter(item => {
-      if (uniqueElements.has(item)) {
-          uniqueElements.delete(item);
-      } else {
-          return item;
-      }
+    if (uniqueElements.has(item)) {
+      uniqueElements.delete(item);
+    } else {
+      return item;
+    }
   });
 
   return filteredElements;
@@ -50,3 +53,8 @@ export const sum = (arr: number[]): number => arr.reduce(add, 0);
 
 export const multiply = (a: number, b: number) => a * b;
 export const product = (arr: number[]): number => arr.reduce(multiply, 1);
+
+export const mapXY = (item: string, separator: string = ','): [number, number] => {
+  const parts = item.split(separator);
+  return [Number(parts[0]), Number(parts[1])];
+}
